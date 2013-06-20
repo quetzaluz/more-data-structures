@@ -16,5 +16,13 @@ describe("linkedList", function() {
     expect(linkedList.contains).toEqual(jasmine.any(Function));
   });
 
+  it('should have a .addToTail method that adds node to tail of list', function() {
+    linkedList.addToTail('a');
+    linkedList.addToTail('b');
+    expect(linkedList.tail.value).toEqual('b');
+  });
+
+
+
   // add more tests here to test the functionality of linkedList
 });
