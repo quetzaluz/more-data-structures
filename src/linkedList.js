@@ -7,6 +7,7 @@ var makeLinkedList = function(){
   newLinkedList.addToTail = function(value){
     if (newLinkedList.head === null && newLinkedList.tail === null) {
       newLinkedList.head = makeNode(value);
+      //do not need to set tail property; it will be null as head.next is null
     } else if (newLinkedList.tail === null) {
       var current = newLinkedList.head; //defined current for traversing list
       while(current.next) {

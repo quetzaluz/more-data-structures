@@ -18,13 +18,20 @@ describe("linkedList", function() {
 
   it('should have a .addToTail method that adds node to tail of list', function() {
     linkedList.addToTail('a');
+    expect(linkedList.tail).toEqual(null);
     linkedList.addToTail('b');
     expect(linkedList.tail.value).toEqual('b');
+    linkedList.addToTail('c');
+    expect(linkedList.tail.value).toEqual('c');
+
   });
 
   it('should have a .head property that stores a node object type', function () {
     linkedList.addToTail('a');
     expect(linkedList.head.value).toEqual('a');
+    linkedList.addToTail('b');
+    expect(linkedList.head.value).toEqual('a');
+
   });
 
 
