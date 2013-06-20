@@ -22,6 +22,10 @@ describe("linkedList", function() {
     expect(linkedList.tail.value).toEqual('b');
   });
 
+  it('should have a .head property that stores a node object type', function () {
+    linkedList.addToTail('a');
+    expect(linkedList.head.value).toEqual('a');
+  });
 
 
   // add more tests here to test the functionality of linkedList
