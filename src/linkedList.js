@@ -19,10 +19,14 @@ var makeLinkedList = function(){
       newLinkedList.tail.next = makeNode(value);
       newLinkedList.tail = newLinkedList.tail.next;
     }
-
   };
 
   newLinkedList.removeHead = function(){
+    oldHead = newLinkedList.head;
+    newHead = newLinkedList.head.next;
+    delete newLinkedList.head;
+    newLinkedList.head = newHead;
+    return oldHead.value;
   };
 
   newLinkedList.contains = function(){

@@ -34,6 +34,12 @@ describe("linkedList", function() {
 
   });
 
+  it('should have a .removeHead method that removes first node and returns value', function(){
+    linkedList.addToTail('a');
+    linkedList.addToTail('b');
+    expect(linkedList.removeHead()).toEqual('a');
+    expect(linkedList.head.value).toEqual('b');
 
+  });
   // add more tests here to test the functionality of linkedList
 });
