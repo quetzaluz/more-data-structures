@@ -39,7 +39,14 @@ describe("linkedList", function() {
     linkedList.addToTail('b');
     expect(linkedList.removeHead()).toEqual('a');
     expect(linkedList.head.value).toEqual('b');
+  });
 
+  it('should have a .contains method that returns true value is present, else false', function () {
+    linkedList.addToTail('a');
+    linkedList.addToTail('b');
+    expect(linkedList.contains('a')).toEqual(true);
+    expect(linkedList.contains('b')).toEqual(true);
+    expect(linkedList.contains('c')).toEqual(false);
   });
   // add more tests here to test the functionality of linkedList
 });

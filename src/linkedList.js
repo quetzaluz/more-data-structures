@@ -29,7 +29,17 @@ var makeLinkedList = function(){
     return oldHead.value;
   };
 
-  newLinkedList.contains = function(){
+  newLinkedList.contains = function(value){
+    var current = newLinkedList.head;
+    var present = false;
+    if (current.value === value) {present = true;}
+    while(current.next) {
+      if (current.next.value === value) {
+        present = true;
+      }
+      current = current.next;
+    }
+    return present;
   };
 
   return newLinkedList;
