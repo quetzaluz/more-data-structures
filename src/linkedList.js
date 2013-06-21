@@ -30,15 +30,14 @@ var makeLinkedList = function(){
 
   newLinkedList.contains = function(value){
     var current = newLinkedList.head;
-    var present = false;
-    if (current.value === value) {present = true;}
     while(current.next) {
-      if (current.next.value === value) {
-        present = true;
+      if (current.value === value) {
+        return true;
       }
       current = current.next;
     }
-    return present;
+    if (current.value === value) {return true;}
+    return false;
   };
 
   return newLinkedList;
