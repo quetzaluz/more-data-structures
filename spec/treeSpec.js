@@ -24,5 +24,12 @@ describe("tree", function() {
 
   });
 
+  it("should have a .contains method that recursively searches for trees with a given value", function() {
+    tree.addChild('subtree1');
+    tree.children[0].addChild('subtree2');
+    expect(tree.contains('subtree1')).toEqual(true);
+    expect(tree.contains('subtree2')).toEqual(true);
+    expect(tree.contains('subtree3')).toEqual(false);
+  });
   // Add more tests here to test the functionality of tree.
 });

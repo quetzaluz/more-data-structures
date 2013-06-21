@@ -15,9 +15,19 @@ treeMethods.addChild = function(value){
   newSubtree = makeTree();
   newSubtree.value = value;
   this.children.push(newSubtree);
+  return newSubtree;
 };
 
-treeMethods.contains = function(){
+treeMethods.contains = function(value){
+  for (var i = 0; i < this.children.length; i++){
+  	if (this.children[i].value === value) {
+  	  return true;
+  	};
+  	if (this.children[i].children.length !== 0){
+  	  return this.children[i].contains(value);
+  	};
+  };
+  return false;
 };
 
 //Removed node code before--realized that nodes are subtrees
