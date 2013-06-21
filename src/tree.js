@@ -1,7 +1,7 @@
 var makeTree = function(){
   var newTree = {};
   newTree.value = undefined;
-  newTree.children = undefined;
+  newTree.children = [];
   _.extend(newTree, treeMethods);
 
   return newTree;
@@ -10,19 +10,12 @@ var makeTree = function(){
 var treeMethods = {};
 
 treeMethods.addChild = function(){
+//.addChild() method, takes any value, sets that as the
+//target of a node, and adds that node as a child of the tree
 
 };
 
 treeMethods.contains = function(){
 };
 
-//Method below copied and modified from linkedList problem.
-//Kept separate from makeTree because you want to only add to
-//trees by using the tree.addChild method, which calls this.
-
-var makeNode = function(value){
-  var newNode = {};
-  newNode.value = value;
-  newNode.children = null;
-  return newNode;
-};
+//Removed node code before--realized that nodes are subtrees

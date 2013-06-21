@@ -11,5 +11,13 @@ describe("tree", function() {
     expect('value' in tree).toBe(true);
   });
 
+  it("should have a .children property which is an array", function() {
+    expect(Array.isArray(tree.children)).toEqual(true);
+  });
+
+  it("should have a .addChild method, takes any value, sets that as the target of a node, and adds that node as a child of the tree", function() {
+    //
+  });
+
   // Add more tests here to test the functionality of tree.
 });
