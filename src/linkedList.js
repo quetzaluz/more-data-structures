@@ -22,11 +22,10 @@ var makeLinkedList = function(){
   };
 
   newLinkedList.removeHead = function(){
-    oldHead = newLinkedList.head;
-    newHead = newLinkedList.head.next;
-    delete newLinkedList.head;
-    newLinkedList.head = newHead;
-    return oldHead.value;
+    //No delete calls necessary--with reassignment old head is garbage collected
+    oldHeadValue = newLinkedList.head.value;
+    newLinkedList.head = newLinkedList.head.next;
+    return oldHeadValue;
   };
 
   newLinkedList.contains = function(value){

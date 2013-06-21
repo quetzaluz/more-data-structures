@@ -28,7 +28,9 @@ describe("linkedList", function() {
 
   it('should have a .head property that stores a node object type', function () {
     linkedList.addToTail('a');
-    expect(linkedList.head.value).toEqual('a');
+    //Can also have a non value specific solution, see below:
+    //expect(linkedList.head.hasOwnProperty('value')).toEqual(true);
+    expect(linkedList.head.hasOwnProperty('value')).toEqual(true);
     linkedList.addToTail('b');
     expect(linkedList.head.value).toEqual('a');
 
