@@ -15,8 +15,13 @@ describe("tree", function() {
     expect(Array.isArray(tree.children)).toEqual(true);
   });
 
-  it("should have a .addChild method, takes any value, sets that as the target of a node, and adds that node as a child of the tree", function() {
-    //
+  it("should have a .addChild method that creates a new subtree with value", function() {
+    expect(tree.children).toEqual([]);
+    tree.addChild('subtree1');
+    expect(tree.children[0].value).toEqual('subtree1');
+    tree.addChild('subtree2');
+    expect(tree.children[1].value).toEqual('subtree2');
+
   });
 
   // Add more tests here to test the functionality of tree.

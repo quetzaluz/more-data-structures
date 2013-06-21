@@ -9,10 +9,12 @@ var makeTree = function(){
 
 var treeMethods = {};
 
-treeMethods.addChild = function(){
+treeMethods.addChild = function(value){
 //.addChild() method, takes any value, sets that as the
 //target of a node, and adds that node as a child of the tree
-
+  newSubtree = makeTree();
+  newSubtree.value = value;
+  this.children.push(newSubtree);
 };
 
 treeMethods.contains = function(){
